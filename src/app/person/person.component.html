@@ -1,0 +1,46 @@
+<h3>Day 2 - First Assignment</h3>
+<p>
+  Display the information of all Persons
+</p>
+<table>
+  <tr>
+    <td>Sl no</td>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Address</td>
+    <td>Email</td>
+    <td>IsGraduate</td>
+  </tr>
+  <tr *ngFor="let record of persons; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{record.name}}</td>
+    <td>{{record.age}}</td>
+    <td>{{record.address}}</td>
+    <td>{{record.email}}</td>
+    <td>{{record.isGraduate}}</td>
+  </tr>
+</table>
+<h3>Day 2 - Second Assignment</h3>
+<h4> Print only the persons who are graduated</h4>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Sl no</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>email</th>
+      <th>address</th>
+      <th>isGraduate</th>
+    </tr>
+  </thead>
+  <ng-container *ngFor="let person of persons; let i = index">
+    <tr *ngIf="person.isGraduate">
+      <td>{{i+1}}</td>
+      <td> {{ person.name }}</td>
+      <td> {{ person.age }}</td>
+      <td> {{ person.email }}</td>
+      <td> {{ person.address }}</td>
+      <td> {{ person.isGraduate }}</td>
+    </tr>
+  </ng-container>
+</table>

@@ -9,6 +9,7 @@ import { DayComponentComponent } from './day-component/day-component.component';
 import { DayComponent } from './dayComponent';
 import { HelloComponent } from './HelloComponent';
 import { WelcomeComponent } from './WelcomeComponent';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WelcomeComponent } from './WelcomeComponent';
     DayComponentComponent,
     DayComponent,
     HelloComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
