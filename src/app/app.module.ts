@@ -10,6 +10,7 @@ import { DayComponent } from './dayComponent';
 import { HelloComponent } from './HelloComponent';
 import { WelcomeComponent } from './WelcomeComponent';
 import { PersonComponent } from './person/person.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PersonComponent } from './person/person.component';
     DayComponent,
     HelloComponent,
     WelcomeComponent,
-    PersonComponent
+    PersonComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,
