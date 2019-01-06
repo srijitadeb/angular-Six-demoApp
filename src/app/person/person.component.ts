@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import {Person} from '../interfaces/person'
 
 @Component({
   selector: 'app-person',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
 
-  persons:any [] = [
+  persons:Person[]= [
     {
       name: 'Mr. A',
       age: 18,
@@ -49,6 +50,9 @@ export class PersonComponent implements OnInit {
 
     }
   ]
+  ShowGraduatePersons(){
+    this.persons = this.persons.filter((Person) => Person.isGraduate)
+  }
 
   constructor() { }
 

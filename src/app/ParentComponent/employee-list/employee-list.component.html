@@ -1,0 +1,32 @@
+<p>
+  employee-list works!
+</p>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Sl no</th>
+        <th>Emp Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+  <tr *ngFor="let employee of employeeList; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{employee.empId}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.age}}</td>
+    <td>{{employee.address}}</td>
+    <td>
+      {{employee.email}} &nbsp;&nbsp;
+        <span>
+            <button type="button" (click)="addEmp()" class="btn btn-outline-primary">Add</button>
+            <app-create-employee [addEmployee]="major" [updateEmployee]="minor"></app-create-employee>
+        </span> &nbsp;&nbsp;
+        <span>
+            <button type="button" (click)="editEmp()" class="btn btn-outline-warning">Edit</button>
+        </span>
+    </td>
+  </tr>
+</table>
