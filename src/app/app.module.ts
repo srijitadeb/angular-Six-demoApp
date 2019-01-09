@@ -17,6 +17,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeListComponent } from './ParentComponent/employee-list/employee-list.component';
 import { CreateEmployeeComponent } from './ChildComponents/create-employee/create-employee.component';
 import { NgbdModalBasic } from './modal-basic';
+import { NgbdModalBasicCreate } from './ChildComponents/create-employee/modal-basic-create'
+import { UpdateEmployeeComponent } from './ChildComponents/update-employee/update-employee.component';
+import { from } from 'rxjs';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,11 @@ import { NgbdModalBasic } from './modal-basic';
     EventBindingComponent,
     EmployeeListComponent,
     CreateEmployeeComponent,
-    NgbdModalBasic
+    NgbdModalBasic,
+    NgbdModalBasicCreate,
+    UpdateEmployeeComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

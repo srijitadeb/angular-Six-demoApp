@@ -38,17 +38,11 @@ export class EmployeeListComponent implements OnInit {
     }
   ];
 
-  addEmployee = 1;
-  updateEmployee = 23;
  
-  addEmp() {
-    this.addEmployee++;
-    console.log(this.addEmployee);
-  }
- 
-  editEmp() {
-    this.addEmployee++;
-    this.updateEmployee = 0;
+  //create new emp 
+  newEmployee(event: any){
+    console.log('New employee in parent component');
+    this.employeeList.push(event);
   }
   constructor() { }
 

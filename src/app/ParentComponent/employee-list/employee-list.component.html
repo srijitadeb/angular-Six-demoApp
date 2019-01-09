@@ -20,13 +20,17 @@
     <td>{{employee.address}}</td>
     <td>
       {{employee.email}} &nbsp;&nbsp;
+         &nbsp;&nbsp;
         <span>
-            <button type="button" (click)="addEmp()" class="btn btn-outline-primary">Add</button>
-            <app-create-employee [addEmployee]="major" [updateEmployee]="minor"></app-create-employee>
-        </span> &nbsp;&nbsp;
-        <span>
-            <button type="button" (click)="editEmp()" class="btn btn-outline-warning">Edit</button>
+            <!-- <button type="button" (click)="editEmp()" class="btn btn-outline-warning">Edit</button> -->
+            <!-- <app-create-employee [updateEmployee] = 'employeeList'></app-create-employee> -->
+            <app-update-employee [updateEmployee] = 'employeeList'></app-update-employee>
         </span>
     </td>
   </tr>
 </table>
+<app-create-employee [employee] = 'employeeList' (addEmployee)="newEmployee($event)"></app-create-employee>
+<!-- <button type="button" class="btn btn-info" (click)="toggle()">Create Employee</button> -->
+
+
+ 
