@@ -1,0 +1,65 @@
+[
+    {
+      "model":"911",
+      "modelYr":"2004",
+      "engineCapacity":"130cc",
+      "color":"white",
+      "transmissionMode":"df",
+      "carType":"Porsche",
+      "price": 135000
+    },
+    {
+      "model":"GT-R",
+      "modelYr":"2018",
+      "engineCapacity":"200cc",
+      "color": "White",
+      "transmissionMode": "",
+      "carType":"Nissan",
+      "price": 800000
+    },
+    {
+      "model":"M3",
+      "modelYr":"2017",
+      "engineCapacity":"200cc",
+      "color":"Black",
+      "transmissionMode": "jh",
+      "carType":"BMW",
+      "price": 605000
+    },
+    {
+        "model":"M3-4",
+        "modelYr":"2016",
+        "engineCapacity":"200cc",
+        "color":"Red",
+        "transmissionMode": "jh",
+        "carType":"Audi",
+        "price": 605000
+      },
+      {
+        "model":"Audi-02",
+        "modelYr":"2017",
+        "engineCapacity":"200cc",
+        "color":"Black",
+        "transmissionMode": "jh",
+        "carType":"Audi",
+        "price": 1350000
+      },
+      {
+        "model":"911",
+        "modelYr":"2004",
+        "engineCapacity":"130cc",
+        "color":"white",
+        "transmissionMode":"df",
+        "carType":"Porsche",
+        "price": 135000
+      },
+      {
+        "model":"GT-R",
+        "modelYr":"2018",
+        "engineCapacity":"200cc",
+        "color": "White",
+        "transmissionMode": "",
+        "carType":"Nissan",
+        "price": 800000
+      }
+  ]

@@ -1,0 +1,52 @@
+<mat-card-header>
+  <mat-toolbar>
+    <mat-card-title>Add New Car Detail</mat-card-title>
+  </mat-toolbar>
+</mat-card-header>
+<mat-card-content>
+  <div class="container">
+    <form [formGroup]="_newCarRegistrationForm">
+      <div class="row">
+        <div class="col-md-6">
+            <label for="carType">Car Type</label>
+            <input type="text" class="form-control" formControlName="carType" id="carType">
+        </div>
+        <div class="col-md-6">
+            <label for="carModel">Model:</label>
+            <input type="text" class="form-control" formControlName="carModel" id="carModel">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="engineCapacity">Engine Capacity:</label>
+          <input type="text" class="form-control" formControlName="engineCapacity" id="engineCapacity">
+        </div>
+        <div class="col-md-6">
+          <label for="color">Color:</label>
+          <input type="text" class="form-control" formControlName="color" id="color">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="transmissionMode">Transmission Mode:</label>
+          <input type="text" class="form-control" formControlName="transmissionMode" id="transmissionMode">
+        </div>
+        <div class="col-md-6">
+          <label for="price">Price:</label>
+          <input type="text" class="form-control" formControlName="price" id="price">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="modelYr">Model Year:</label>
+          <input type="text" class="form-control" formControlName="modelYr" id="modelYr">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit"  (click)="onSubmit()" class="btn btn-success"><mat-icon>Save</mat-icon></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</mat-card-content>

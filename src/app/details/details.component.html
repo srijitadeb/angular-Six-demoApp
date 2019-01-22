@@ -1,0 +1,36 @@
+<!-- <div class="regdetails">
+    <div class="jumbotron">
+        <h1 class="display-4">{{ car.carType }}</h1>
+        <p class="lead">Below are the details:</p>
+        <hr class="my-4">
+        <p><strong>Car Model:</strong> {{ car.model }}</p>
+        <p><strong>Year of Model:</strong> {{ car.modelYr }}</p>
+        <p><strong>Engine Capacity:</strong> {{ car.engineCapacity }}</p>
+        <p><strong>Color:</strong> {{ car.color }}</p>
+        <p><strong>Transmission Mode:</strong> {{ car.transmissionMode }}</p>
+        <p><strong>Price:</strong> {{ car.price }}</p> 
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" (click)="goBack()" role="button">Go Back</a>
+        </p>
+      </div>
+</div> -->
+<div class="container">
+    <h4 class="display-4">{{ car.carType }}</h4>
+  <mat-list>
+    <mat-list-item> <strong>Car Model: &nbsp;</strong>  {{ car.model }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><strong>Year of Model: &nbsp;</strong> {{ car.modelYr }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><strong>Engine Capacity: &nbsp;</strong> {{ car.engineCapacity }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><strong>Color: &nbsp;</strong> {{ car.color }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><strong>Transmission Mode: &nbsp;</strong> {{ car.transmissionMode }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><strong>Price: &nbsp;</strong> {{ car.price }}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+  <p class="lead">
+      <a class="btn btn-primary" (click)="goBack()" role="button">Go Back</a>
+    </p>
+</div>

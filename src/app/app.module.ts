@@ -2,6 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +31,11 @@ import { UpdateEmployeeComponent } from './ChildComponents/update-employee/updat
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './details/details.component';
+import { AddCarComponent } from './add-car/add-car.component';
+import { CarDetailsService }from './service/car-details.service';
 
 @NgModule({
   declarations: [
@@ -40,16 +54,32 @@ import { AboutComponent } from './about/about.component';
     NgbdModalBasicCreate,
     UpdateEmployeeComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    NavBarComponent,
+    DetailsComponent,
+    AddCarComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatGridListModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatDividerModule,
+    MatListModule,
+    MatToolbarModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  entryComponents: [AddCarComponent],
+  providers: [CarDetailsService,HomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
