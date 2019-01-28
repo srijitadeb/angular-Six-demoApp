@@ -1,24 +1,38 @@
-
 <div class="container">
-    <div class="example-button-row iconPos">
-        <button mat-fab color="primary" (click)="addNew()">Add</button>
-    </div>
-  <div class="cardConatiner" *ngFor =" let car of registeredCarDetail; let i = index">
-    <mat-card class="example-card" >
+  <div class="example-button-row iconPos">
+    <button mat-fab color="primary" (click)="addNew(i + 1)">Add</button>
+  </div>
+  <div
+    class="cardConatiner"
+    *ngFor="let car of _CarDetailsService._carList; let i = index"
+  >
+    <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title>{{car.carType}}</mat-card-title>
-        <mat-card-subtitle>{{i+1}}</mat-card-subtitle>
+        <mat-card-title>{{ car.carType }}</mat-card-title>
+        <mat-card-subtitle>{{ i + 1 }}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <img
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
       <mat-card-content>
         <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz
+          breeds of dog from Japan. A small, agile dog that copes very well with
+          mountainous terrain, the Shiba Inu was originally bred for hunting.
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button color="warn" routerLink="/details/{{ i }}">Detail</button>
+        <button mat-raised-button color="accent" routerLink="/details/{{ i }}">
+          Detail
+        </button>
+        <button mat-raised-button color="primary" (click)="onEdit(i + 1)">
+          Edit
+        </button>
+        <button mat-raised-button color="warn" (click)="onDelete(i + 1)">
+          Delete
+        </button>
       </mat-card-actions>
     </mat-card>
   </div>

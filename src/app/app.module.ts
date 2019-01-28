@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+//import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
@@ -36,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { AddCarComponent } from './add-car/add-car.component';
 import { CarDetailsService }from './service/car-details.service';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -76,7 +81,10 @@ import { CarDetailsService }from './service/car-details.service';
     MatListModule,
     MatToolbarModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    //AngularFirestore
   ],
   entryComponents: [AddCarComponent],
   providers: [CarDetailsService,HomeComponent],
